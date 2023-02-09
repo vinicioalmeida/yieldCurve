@@ -1,2 +1,2 @@
 # yieldCurve
-Yield curve calculation
+Yield curve calculation.
