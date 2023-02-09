@@ -30,12 +30,15 @@ p = ggplot(df.yield, aes(x=Year, y = Return) ) +
            subtitle = paste0('Date: ', df.yield$current.date[1]))     
 print(p)
 
+# Short term nominal rate
+days = 24
+rf = ((1 + (Return[75]) / 100) ^ (days / 252) - 1) * 100
+rf
+
 # Historical yield curve
 date = df.yield$current.date[1]
 ycfile = paste("yc", date, ".xlsx", sep = "")
 write_xlsx(df.yield, ycfile)
 
-# Short term nominal rate
-days = 24
-rf = ((1 + (Return[75]) / 100) ^ (days / 252) - 1) * 100
-rf
+# Plot curves
+
