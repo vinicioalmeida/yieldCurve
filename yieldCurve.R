@@ -31,7 +31,7 @@ p = ggplot(df.yield, aes(x=Year, y = Return) ) +
 print(p)
 
 # Short term nominal rate
-days = 24
+days = 23
 rf = ((1 + (Return[75]) / 100) ^ (days / 252) - 1) * 100
 rf
 
