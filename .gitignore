@@ -6,6 +6,8 @@
 *.lo
 *.o
 *.obj
+*.Rdata
+*.Rhistory
 
 # Precompiled Headers
 *.gch
@@ -36,3 +38,4 @@
 *.xlsx
 *.doc
 *.docx
+*.pdf
