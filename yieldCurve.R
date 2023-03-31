@@ -24,10 +24,10 @@ Year = df.yield$ref.date
 Return = df.yield$value
 
 p = ggplot(df.yield, aes(x=Year, y = Return) ) +
-           geom_line(linewidth=0.5) + geom_point() + 
-           facet_grid(~type, scales = 'free') + 
-           labs(title = paste0('Brazilian Yield Curve '),
-           subtitle = paste0('Date: ', df.yield$current.date[1]))     
+  geom_line(linewidth=0.5) + geom_point() + 
+  facet_grid(~type, scales = 'free') + 
+  labs(title = paste0('Brazilian Yield Curve '),
+       subtitle = paste0('Date: ', df.yield$current.date[1]))     
 print(p)
 
 # Short term nominal rate
@@ -41,4 +41,3 @@ ycfile = paste("yc", date, ".xlsx", sep = "")
 write_xlsx(df.yield, ycfile)
 
 # Plot curves
-
